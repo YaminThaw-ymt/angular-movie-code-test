@@ -1,0 +1,25 @@
+<main class="page">
+  <header>
+    <p class="eyebrow">YOUR COLLECTION</p>
+    <h1>Watchlist</h1>
+    <p>Saved locally in your browser.</p>
+  </header>
+
+  @if (watchlist.watchlist$ | async; as movies) {
+    @if (movies.length) {
+      <div class="grid">
+        @for (movie of movies; track movie.id) {
+          <div class="item">
+            <app-movie-card [movie]="movie" />
+            <button type="button" (click)="remove(movie.id)">Remove</button>
+          </div>
+        }
+      </div>
+    } @else {
+      <app-empty-state
+        title="Your watchlist is empty"
+        message="Open a movie and add it to your watchlist."
+      />
+    }
+  }
+</main>

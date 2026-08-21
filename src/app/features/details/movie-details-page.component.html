@@ -1,0 +1,100 @@
+<main class="page">
+  <a class="back" routerLink="/search">← Back to search</a>
+
+  @if (state$ | async; as state) {
+    @switch (state.state) {
+      @case ('loading') {
+        <app-loading />
+      }
+
+      @case ('error') {
+        <app-error-message
+          [message]="state.error || ''"
+          (retry)="facade.retry()"
+        />
+      }
+
+      @case ('empty') {
+        <app-empty-state />
+      }
+
+      @case ('success') {
+        @if (state.data; as movie) {
+          <section class="hero">
+            <div class="poster">
+              @if (movie.poster_path) {
+                <img
+                  [src]="poster(movie.poster_path)"
+                  [alt]="movie.title + ' poster'"
+                />
+              }
+            </div>
+
+            <div class="info">
+              <h1>{{ movie.title }}</h1>
+              <p class="meta">
+                {{ movie.release_date.slice(0, 4) || '—' }}
+                · ★ {{ movie.vote_average | number: '1.1-1' }}
+              </p>
+
+              <div class="genres">
+                @for (genre of movie.genres; track genre.id) {
+                  <span>{{ genre.name }}</span>
+                }
+              </div>
+
+              <p class="overview">
+                {{ movie.overview || 'No overview available.' }}
+              </p>
+
+              <button class="watch" type="button" (click)="toggle(movie)">
+                {{ isSaved(movie.id) ? '✓ Remove from watchlist' : '+ Add to watchlist' }}
+              </button>
+            </div>
+          </section>
+
+          <section>
+            <h2>Top cast</h2>
+
+            <div class="cast">
+              @for (actor of movie.credits.cast.slice(0, 5); track actor.id) {
+                <article>
+                  <div class="avatar">
+                    @if (actor.profile_path) {
+                      <img
+                        [src]="profile(actor.profile_path)"
+                        [alt]="actor.name"
+                        loading="lazy"
+                      />
+                    } @else {
+                      <span aria-hidden="true">?</span>
+                    }
+                  </div>
+                  <strong>{{ actor.name }}</strong>
+                  <small>{{ actor.character }}</small>
+                </article>
+              }
+            </div>
+          </section>
+
+          <section>
+            <h2>Recommendations</h2>
+
+            @if (movie.recommendations.results.length) {
+              <div class="grid">
+                @for (item of movie.recommendations.results.slice(0, 10); track item.id) {
+                  <app-movie-card [movie]="item" />
+                }
+              </div>
+            } @else {
+              <app-empty-state
+                title="No recommendations"
+                message="TMDB did not return similar movies."
+              />
+            }
+          </section>
+        }
+      }
+    }
+  }
+</main>

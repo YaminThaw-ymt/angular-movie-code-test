@@ -1,0 +1,28 @@
+<header class="shell">
+  <a class="brand" routerLink="/search">
+    🎬 MovieBox
+  </a>
+
+  <nav aria-label="Main navigation">
+    <a
+      routerLink="/search"
+      [class.active]="isSearchActive()"
+    >
+      Search
+    </a>
+
+    <a
+      routerLink="/watchlist"
+      [class.active]="isWatchlistActive()"
+    >
+      Watchlist
+      <span class="badge">
+        {{ (watchlist.watchlist$ | async)?.length ?? 0 }}
+      </span>
+    </a>
+  </nav>
+</header>
+
+<router-outlet />
+
+<footer>MovieBox</footer>

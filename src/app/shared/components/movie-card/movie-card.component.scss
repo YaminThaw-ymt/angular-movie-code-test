@@ -1,0 +1,71 @@
+:host {
+  display: block;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.06);
+}
+
+.poster-link {
+  display: block;
+  aspect-ratio: 2 / 3;
+  background: #e5e7eb;
+}
+
+img,
+.poster-placeholder {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-placeholder {
+  display: grid;
+  place-items: center;
+  color: #64748b;
+}
+
+.body {
+  padding: 14px;
+}
+
+.title {
+  display: block;
+  min-height: 2.6em;
+  color: #111827;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 10px 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.details {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #111827;
+  text-align: center;
+  text-decoration: none;
+}
+
+.details:focus-visible,
+.title:focus-visible,
+.poster-link:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}

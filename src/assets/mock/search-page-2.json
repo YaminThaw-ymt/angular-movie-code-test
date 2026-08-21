@@ -1,0 +1,57 @@
+{
+  "page": 2,
+  "total_pages": 3,
+  "total_results": 15,
+  "results": [
+    {
+      "id": 6,
+      "title": "The Shawshank Redemption",
+      "overview": "A banker finds hope and friendship inside prison.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "release_date": "1994-07-15",
+      "vote_average": 8.7,
+      "vote_count": 10600
+    },
+    {
+      "id": 7,
+      "title": "Parasite",
+      "overview": "A struggling family becomes entangled with a wealthy household.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "release_date": "2019-07-15",
+      "vote_average": 8.5,
+      "vote_count": 10700
+    },
+    {
+      "id": 8,
+      "title": "Spirited Away",
+      "overview": "A young girl enters a mysterious spirit world.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "release_date": "2001-07-15",
+      "vote_average": 8.6,
+      "vote_count": 10800
+    },
+    {
+      "id": 9,
+      "title": "Gladiator",
+      "overview": "A Roman general seeks justice after betrayal.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "release_date": "2000-07-15",
+      "vote_average": 8.2,
+      "vote_count": 10900
+    },
+    {
+      "id": 10,
+      "title": "The Godfather",
+      "overview": "A crime family passes power to the reluctant youngest son.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "release_date": "1972-07-15",
+      "vote_average": 9.2,
+      "vote_count": 11000
+    }
+  ]
+}

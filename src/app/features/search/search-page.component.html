@@ -1,0 +1,105 @@
+<main class="page">
+  <header class="heading">
+    <div>
+      <p class="eyebrow">MOVIE SEARCH</p>
+      <h1>Find your next movie</h1>
+      <p>Search, filter and save movies to your local watchlist.</p>
+    </div>
+  </header>
+
+  <form class="filters" (submit)="$event.preventDefault()" aria-label="Movie filters">
+    <label>
+      Search movie
+      <input
+        [formControl]="query"
+        type="search"
+        placeholder="e.g. Interstellar"
+        autocomplete="off"
+      />
+    </label>
+
+    <label>
+      Year
+      <input
+        [formControl]="year"
+        type="text"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        maxlength="4"
+        placeholder="e.g. 2014"
+        autocomplete="off"
+      />
+    </label>
+
+    <label>
+      Minimum rating
+      <select [formControl]="minRating">
+        <option value="">Any rating</option>
+        <option value="5">5+</option>
+        <option value="6">6+</option>
+        <option value="7">7+</option>
+        <option value="8">8+</option>
+        <option value="9">9+</option>
+      </select>
+    </label>
+  </form>
+
+  @if (state$ | async; as state) {
+    @switch (state.state) {
+      @case ('idle') {
+        <app-empty-state
+          title="Start searching"
+          message="Enter a movie title to begin."
+        />
+      }
+
+      @case ('loading') {
+        <app-loading />
+      }
+
+      @case ('error') {
+        <app-error-message
+          [message]="state.error || ''"
+          (retry)="facade.retry()"
+        />
+      }
+
+      @case ('empty') {
+        <app-empty-state
+          title="No movies found"
+          message="Try another title or relax your filters."
+        />
+      }
+
+      @case ('success') {
+        <section aria-label="Search results">
+          <div class="result-count">
+            Showing {{ state.data.length }} result{{ state.data.length === 1 ? '' : 's' }}
+          </div>
+
+          <div class="grid">
+            @for (movie of state.data; track movie.id) {
+              <app-movie-card [movie]="movie" />
+            }
+          </div>
+
+          @if ((facade.totalPages$ | async)! > (currentPage$ | async)!) {
+            <button
+              class="load-more"
+              type="button"
+              (click)="facade.loadMore()"
+              [disabled]="(facade.loadingMore$ | async)"
+              aria-label="Load more search results"
+            >
+              @if (facade.loadingMore$ | async) {
+                Loading...
+              } @else {
+                Load more
+              }
+            </button>
+          }
+        </section>
+      }
+    }
+  }
+</main>

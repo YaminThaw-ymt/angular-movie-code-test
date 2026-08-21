@@ -1,0 +1,111 @@
+{
+  "id": 13,
+  "title": "Arrival",
+  "overview": "A linguist works to communicate with mysterious visitors.",
+  "poster_path": null,
+  "backdrop_path": null,
+  "release_date": "2016-07-15",
+  "vote_average": 7.9,
+  "vote_count": 11300,
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drama"
+    }
+  ],
+  "credits": {
+    "cast": [
+      {
+        "id": 131,
+        "name": "Actor 1",
+        "character": "Character 1",
+        "profile_path": null
+      },
+      {
+        "id": 132,
+        "name": "Actor 2",
+        "character": "Character 2",
+        "profile_path": null
+      },
+      {
+        "id": 133,
+        "name": "Actor 3",
+        "character": "Character 3",
+        "profile_path": null
+      },
+      {
+        "id": 134,
+        "name": "Actor 4",
+        "character": "Character 4",
+        "profile_path": null
+      },
+      {
+        "id": 135,
+        "name": "Actor 5",
+        "character": "Character 5",
+        "profile_path": null
+      }
+    ]
+  },
+  "recommendations": {
+    "page": 1,
+    "total_pages": 1,
+    "total_results": 5,
+    "results": [
+      {
+        "id": 14,
+        "title": "Dune",
+        "overview": "A young heir must protect his people on a dangerous desert planet.",
+        "poster_path": null,
+        "backdrop_path": null,
+        "release_date": "2021-07-15",
+        "vote_average": 8.0,
+        "vote_count": 11400
+      },
+      {
+        "id": 15,
+        "title": "Oppenheimer",
+        "overview": "A physicist leads the development of the atomic bomb.",
+        "poster_path": null,
+        "backdrop_path": null,
+        "release_date": "2023-07-15",
+        "vote_average": 8.6,
+        "vote_count": 11500
+      },
+      {
+        "id": 1,
+        "title": "Inception",
+        "overview": "A skilled thief enters dreams to steal secrets.",
+        "poster_path": null,
+        "backdrop_path": null,
+        "release_date": "2010-07-15",
+        "vote_average": 8.4,
+        "vote_count": 10100
+      },
+      {
+        "id": 2,
+        "title": "Interstellar",
+        "overview": "Explorers travel through a wormhole to find a future for humanity.",
+        "poster_path": null,
+        "backdrop_path": null,
+        "release_date": "2014-07-15",
+        "vote_average": 8.7,
+        "vote_count": 10200
+      },
+      {
+        "id": 3,
+        "title": "The Dark Knight",
+        "overview": "Batman faces a criminal mastermind who plunges Gotham into chaos.",
+        "poster_path": null,
+        "backdrop_path": null,
+        "release_date": "2008-07-15",
+        "vote_average": 8.5,
+        "vote_count": 10300
+      }
+    ]
+  }
+}

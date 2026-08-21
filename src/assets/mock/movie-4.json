@@ -1,0 +1,111 @@
+{
+  "id": 4,
+  "title": "Forrest Gump",
+  "overview": "The life journey of a kind-hearted man unfolds across decades.",
+  "poster_path": null,
+  "backdrop_path": null,
+  "release_date": "1994-07-15",
+  "vote_average": 8.5,
+  "vote_count": 10400,
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drama"
+    },
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    }
+  ],
+  "credits": {
+    "cast": [
+      {
+        "id": 41,
+        "name": "Actor 1",
+        "character": "Character 1",
+        "profile_path": null
+      },
+      {
+        "id": 42,
+        "name": "Actor 2",
+        "character": "Character 2",
+        "profile_path": null
+      },
+      {
+        "id": 43,
+        "name": "Actor 3",
+        "character": "Character 3",
+        "profile_path": null
+      },
+      {
+        "id": 44,
+        "name": "Actor 4",
+        "character": "Character 4",
+        "profile_path": null
+      },
+      {
+        "id": 45,
+        "name": "Actor 5",
+        "character": "Character 5",
+        "profile_path": null
+      }
+    ]
+  },
+  "recommendations": {
+    "page": 1,
+    "total_pages": 1,
+    "total_results": 5,
+    "results": [
+      {
+        "id": 5,
+        "title": "The Matrix",
+        "overview": "A hacker discovers that reality is a simulated world.",
+        "poster_path": null,
+        "backdrop_path": null,
+        "release_date": "1999-07-15",
+        "vote_average": 8.2,
+        "vote_count": 10500
+      },
+      {
+        "id": 6,
+        "title": "The Shawshank Redemption",
+        "overview": "A banker finds hope and friendship inside prison.",
+        "poster_path": null,
+        "backdrop_path": null,
+        "release_date": "1994-07-15",
+        "vote_average": 8.7,
+        "vote_count": 10600
+      },
+      {
+        "id": 7,
+        "title": "Parasite",
+        "overview": "A struggling family becomes entangled with a wealthy household.",
+        "poster_path": null,
+        "backdrop_path": null,
+        "release_date": "2019-07-15",
+        "vote_average": 8.5,
+        "vote_count": 10700
+      },
+      {
+        "id": 8,
+        "title": "Spirited Away",
+        "overview": "A young girl enters a mysterious spirit world.",
+        "poster_path": null,
+        "backdrop_path": null,
+        "release_date": "2001-07-15",
+        "vote_average": 8.6,
+        "vote_count": 10800
+      },
+      {
+        "id": 9,
+        "title": "Gladiator",
+        "overview": "A Roman general seeks justice after betrayal.",
+        "poster_path": null,
+        "backdrop_path": null,
+        "release_date": "2000-07-15",
+        "vote_average": 8.2,
+        "vote_count": 10900
+      }
+    ]
+  }
+}

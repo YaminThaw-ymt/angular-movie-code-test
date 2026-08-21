@@ -1,0 +1,57 @@
+{
+  "page": 3,
+  "total_pages": 3,
+  "total_results": 15,
+  "results": [
+    {
+      "id": 11,
+      "title": "Pulp Fiction",
+      "overview": "Several connected stories unfold in Los Angeles.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "release_date": "1994-07-15",
+      "vote_average": 8.9,
+      "vote_count": 11100
+    },
+    {
+      "id": 12,
+      "title": "Whiplash",
+      "overview": "A young drummer pushes himself under an intense instructor.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "release_date": "2014-07-15",
+      "vote_average": 8.5,
+      "vote_count": 11200
+    },
+    {
+      "id": 13,
+      "title": "Arrival",
+      "overview": "A linguist works to communicate with mysterious visitors.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "release_date": "2016-07-15",
+      "vote_average": 7.9,
+      "vote_count": 11300
+    },
+    {
+      "id": 14,
+      "title": "Dune",
+      "overview": "A young heir must protect his people on a dangerous desert planet.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "release_date": "2021-07-15",
+      "vote_average": 8.0,
+      "vote_count": 11400
+    },
+    {
+      "id": 15,
+      "title": "Oppenheimer",
+      "overview": "A physicist leads the development of the atomic bomb.",
+      "poster_path": null,
+      "backdrop_path": null,
+      "release_date": "2023-07-15",
+      "vote_average": 8.6,
+      "vote_count": 11500
+    }
+  ]
+}

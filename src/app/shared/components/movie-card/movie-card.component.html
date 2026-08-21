@@ -1,0 +1,32 @@
+<article class="card">
+  <a
+    class="poster-link"
+    [routerLink]="['/movies', movie.id]"
+    [attr.aria-label]="'View details for ' + movie.title"
+  >
+    @if (movie.poster_path) {
+      <img
+        [src]="posterUrl"
+        [alt]="movie.title + ' poster'"
+        loading="lazy"
+      />
+    } @else {
+      <div class="poster-placeholder" aria-label="No poster available">
+        No poster
+      </div>
+    }
+  </a>
+
+  <div class="body">
+    <a class="title" [routerLink]="['/movies', movie.id]">
+      {{ movie.title }}
+    </a>
+
+    <div class="meta">
+      <span>{{ releaseYear }}</span>
+      <span aria-label="Rating">★ {{ movie.vote_average | number: '1.1-1' }}</span>
+    </div>
+
+    <a class="details" [routerLink]="['/movies', movie.id]">View details</a>
+  </div>
+</article>

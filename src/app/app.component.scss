@@ -1,0 +1,55 @@
+.shell {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e5e7eb;
+  backdrop-filter: blur(10px);
+}
+
+.brand {
+  color: #111827;
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.shell nav {
+  display: flex;
+  gap: 8px;
+}
+
+.shell nav a {
+  padding: 8px 11px;
+  border-radius: 8px;
+  color: #475569;
+  text-decoration: none;
+}
+
+.shell nav a.active {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.badge {
+  display: inline-grid;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  place-items: center;
+  border-radius: 999px;
+  background: #111827;
+  color: #fff;
+  font-size: 0.72rem;
+}
+
+footer {
+  padding: 30px;
+  border-top: 1px solid #e5e7eb;
+  color: #94a3b8;
+  text-align: center;
+}
